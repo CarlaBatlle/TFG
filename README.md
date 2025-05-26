@@ -25,16 +25,6 @@ Ensure all files are placed in your R working directory (e.g., `~/Documents/prac
 
 ---
 
-## 📁 Repository Structure
-```
-├── data/                # Raw input files (counts and metadata)
-├── results/             # Output figures and DEG results
-├── scripts/             # Modular R scripts
-├── README.md            # This guide
-```
-
----
-
 ## 🧬 Project Scripts
 
 ### `run_deg_analysis.R`
@@ -116,7 +106,7 @@ If you find any issues, have questions, or would like to collaborate, feel free 
 
 ---
 
-## 👩🏻 Author
+## Author
 **Carla Batlle Simó**  
 Bachelor's Degree in Biotechnology - UVic-UCC (2025)
 
