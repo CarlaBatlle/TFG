@@ -106,8 +106,10 @@ All thresholds and filtering criteria are adjustable directly in the R scripts:
 
 You can take the list of DEG symbols and perform enrichment analysis using external tools:
 
-- [Enrichr](https://maayanlab.cloud/Enrichr/): for GO terms, KEGG, WikiPathways
-- [WikiPathways](https://www.wikipathways.org/)
+- [Enrichr](https://maayanlab.cloud/Enrichr/): for GO terms, KEGG, WikiPathways...
+
+  The ones used in the bachelo's thesis:
+- [WikiPathways](https://www.wikipathways.org/): for pathway enrichment
 - [ChEA/ENCODE (via Enrichr)](https://maayanlab.cloud/Enrichr/#libraries): for transcription factor target enrichment
 
 Copy the output gene lists (e.g., `clean_list_beta`) and paste them into Enrichr.  
