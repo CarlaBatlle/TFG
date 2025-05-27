@@ -1,5 +1,5 @@
 
-# 📊 Differential Gene Expression Analysis of Human Pancreatic Alpha and Beta Cells
+# Differential Gene Expression Analysis of Human Pancreatic Alpha and Beta Cells
 
 This repository contains all R scripts and resources used to perform a full pipeline for differential gene expression (DGE) analysis using RNA-seq data from the **Human Islets (HPAP)** project. The aim of this project is to identify transcriptional alterations between pancreatic **beta** and **alpha** cells in **type 2 diabetes (T2D)** donors compared to non-diabetic individuals. This analysis is part of the Bachelor Thesis (TFG) by Carla Batlle Simó (UVic-UCC, 2025).
 
@@ -11,7 +11,7 @@ The project integrates public transcriptomic datasets with open-source statistic
 
 ---
 
-## 📥 Data Acquisition and Format
+## Data Acquisition and Format
 
 Data used in this project was downloaded from the [Human Islets portal](https://www.humanislets.com/#/). The data is publicly available but may require prior registration or data request.
 
@@ -25,7 +25,7 @@ Ensure all files are placed in your R working directory (e.g., `~/Documents/prac
 
 ---
 
-## 🧬 Project Scripts
+##  Project Scripts
 
 ### `run_deg_analysis.R`
 Runs the DEG analysis between conditions using DESeq2. Includes filtering, normalization, and differential testing. You can adjust filtering parameters inside this script.
@@ -50,7 +50,7 @@ Annotates DEG results with SYMBOL and ENTREZID gene identifiers.
 
 ---
 
-## 🚀 Analysis Pipeline
+##  Analysis Pipeline
 
 ### Step-by-step:
 ```r
@@ -77,7 +77,7 @@ get_deg_results(alpha_results$res_deg)
 
 ---
 
-## ⚙️ Parameters and Settings
+##  Parameters and Settings
 The following thresholds and options are used by default (modifiable):
 - Adjusted p-value (padj) threshold: `0.05`
 - Log2 fold change (log2FC) threshold: `1` (absolute)
@@ -91,7 +91,7 @@ All thresholds and filtering criteria are adjustable directly in the R scripts:
 
 ---
 
-## 🧠 Functional Enrichment (Optional)
+##  Functional Enrichment (Optional)
 You can take the list of DEG symbols and perform enrichment analysis using external tools:
 
 - [Enrichr](https://maayanlab.cloud/Enrichr/): for GO terms, KEGG, WikiPathways
@@ -101,7 +101,7 @@ Copy the output gene lists (e.g., `clean_list_beta`) and paste them into Enrichr
 
 ---
 
-## 🤝 Contact and Contributions
+##  Contact and Contributions
 If you find any issues, have questions, or would like to collaborate, feel free to open an issue or submit a pull request. This project is open to improvement and extension.
 
 ---
