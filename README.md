@@ -29,14 +29,14 @@ Data used in this project was downloaded from the [Human Islets portal](https://
 5. Download the following files:
    - `donor.csv`: clinical metadata per donor
    - `unproc_rnaseq.csv`: raw count matrix (bulk RNA-seq)
-   - `unproc_pbrna_Beta.csv`: raw counts (beta cells pseudobulk)
-   - `unproc_pbrna_Alpha.csv`: raw counts (alpha cells pseudobulk)
+   - `unproc_pbrna_Beta.csv`: raw counts matrix (beta cells pseudobulk)
+   - `unproc_pbrna_Alpha.csv`: raw counts matrix (alpha cells pseudobulk)
 
 ### Required files:
 - `donor.csv`: clinical metadata per donor
 - `unproc_rnaseq.csv`: raw count matrix (bulk RNA-seq)
-- `unproc_pbrna_Beta.csv`: raw counts (beta cells pseudobulk)
-- `unproc_pbrna_Alpha.csv`: raw counts (alpha cells pseudobulk)
+- `unproc_pbrna_Beta.csv`: raw counts matrix (beta cells pseudobulk)
+- `unproc_pbrna_Alpha.csv`: raw counts matrix (alpha cells pseudobulk)
 
 Ensure all files are placed in your R working directory (e.g., `~/Documents/practiques/data`). Metadata must include `record_id`, `donorage`, `diagnosis_computed`, and `donorsex` columns. You also have the data abailable in the repository.
 
@@ -47,8 +47,8 @@ Ensure all files are placed in your R working directory (e.g., `~/Documents/prac
 ### `counts2tpm.R`
 Function to convert raw gene counts to TPM using gene length annotations.
 
-### `run_deg_analysis.R`
-Runs the DEG analysis between conditions using DESeq2. Includes filtering, normalization, and differential testing. You can adjust filtering parameters inside this script.
+### `DEG.R`
+Runs the DEG analysis between conditions using DESeq2. Includes data anlysis, filtering, normalization, and differential expressed genes testing. You can adjust filtering parameters inside this script.
 
 ---
 
@@ -56,8 +56,13 @@ Runs the DEG analysis between conditions using DESeq2. Includes filtering, norma
 
 ### Step-by-step:
 ```r
+# Metadata analysis
 pca_donant_analysis("donor.csv")
+
+# Outliers filtering
 full_expression_boxplots("unproc_rnaseq.csv", "TPM_merged.csv")
+
+# Espression distribution
 distrib_bulk <- distrib_dades("unproc_rnaseq.csv")
 distrib_beta <- distrib_dades("unproc_pbrna_Beta.csv")
 distrib_alpha <- distrib_dades("unproc_pbrna_Alpha.csv")
