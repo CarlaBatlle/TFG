@@ -9,6 +9,10 @@ The project integrates public transcriptomic datasets with open-source statistic
 - Visualize results (PCA, UMAP, volcano plots, heatmaps)
 - Extract meaningful biological insights through enrichment analysis
 
+The workflow includes the next steps:
+
+<img width="282" alt="image" src="https://github.com/user-attachments/assets/9be78f5c-329e-450a-b18e-18cdd9a0ac91" />
+
 ---
 
 ## Data Acquisition and Format
