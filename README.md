@@ -15,38 +15,40 @@ The project integrates public transcriptomic datasets with open-source statistic
 
 Data used in this project was downloaded from the [Human Islets portal](https://www.humanislets.com/#/). The data is publicly available but may require prior registration or data request.
 
+### Download procedure:
+
+1. Go to [https://hpap.pmacs.upenn.edu/](https://hpap.pmacs.upenn.edu/)
+2. Navigate to the **Data Download** section.
+3. Apply the following filters:
+   - Sex: **male** and **female**
+   - Diagnosis: **SA (non-diabetic)** and **Type 2 Diabetes**
+4. Select the following datasets:
+   - **Bulk RNA-seq**
+   - **Pseudobulk Alpha**
+   - **Pseudobulk Beta**
+5. Download the following files:
+   - `donor.csv`: clinical metadata per donor
+   - `unproc_rnaseq.csv`: raw count matrix (bulk RNA-seq)
+   - `unproc_pbrna_Beta.csv`: raw counts (beta cells pseudobulk)
+   - `unproc_pbrna_Alpha.csv`: raw counts (alpha cells pseudobulk)
+
 ### Required files:
 - `donor.csv`: clinical metadata per donor
 - `unproc_rnaseq.csv`: raw count matrix (bulk RNA-seq)
 - `unproc_pbrna_Beta.csv`: raw counts (beta cells pseudobulk)
 - `unproc_pbrna_Alpha.csv`: raw counts (alpha cells pseudobulk)
 
-Ensure all files are placed in your R working directory (e.g., `~/Documents/practiques/data`). Metadata must include `record_id`, `donorage`, `diagnosis_computed`, and `donorsex` columns.
+Ensure all files are placed in your R working directory (e.g., `~/Documents/practiques/data`). Metadata must include `record_id`, `donorage`, `diagnosis_computed`, and `donorsex` columns. You also have the data abailable in the repository.
 
 ---
 
 ##  Project Scripts
 
-### `run_deg_analysis.R`
-Runs the DEG analysis between conditions using DESeq2. Includes filtering, normalization, and differential testing. You can adjust filtering parameters inside this script.
-
-### `visualize_deg_results.R`
-Visualizes DEG output: volcano plots, heatmaps, PCA and UMAP embeddings, top gene scatterplots.
-
 ### `counts2tpm.R`
 Function to convert raw gene counts to TPM using gene length annotations.
 
-### `pca_donant_analysis.R`
-Performs PCA on donor metadata variables (age, BMI, diagnosis, etc.).
-
-### `full_expression_boxplots.R`
-Creates boxplots for global gene expression and individual genes of interest (e.g., INS, GCG, MKI67).
-
-### `distrib_dades.R`
-Performs quality control and filters samples and genes based on expression thresholds.
-
-### `get_deg_results.R`
-Annotates DEG results with SYMBOL and ENTREZID gene identifiers.
+### `run_deg_analysis.R`
+Runs the DEG analysis between conditions using DESeq2. Includes filtering, normalization, and differential testing. You can adjust filtering parameters inside this script.
 
 ---
 
@@ -91,13 +93,17 @@ All thresholds and filtering criteria are adjustable directly in the R scripts:
 
 ---
 
-##  Functional Enrichment (Optional)
+## Functional Enrichment Analysis
+
 You can take the list of DEG symbols and perform enrichment analysis using external tools:
 
 - [Enrichr](https://maayanlab.cloud/Enrichr/): for GO terms, KEGG, WikiPathways
 - [WikiPathways](https://www.wikipathways.org/)
+- [ChEA/ENCODE (via Enrichr)](https://maayanlab.cloud/Enrichr/#libraries): for transcription factor target enrichment
 
-Copy the output gene lists (e.g., `clean_list_beta`) and paste them into Enrichr. You may use the full list, or just upregulated/downregulated genes. Outputs can reveal transcription factors (via ChEA/ENCODE), enriched pathways, or disease links.
+Copy the output gene lists (e.g., `clean_list_beta`) and paste them into Enrichr.  
+You may use the full list, or just upregulated/downregulated genes.  
+Outputs can reveal transcription factors (via ChEA/ENCODE), enriched pathways, or disease links.
 
 ---
 
