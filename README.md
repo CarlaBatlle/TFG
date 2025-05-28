@@ -21,7 +21,7 @@ Data used in this project was downloaded from the [Human Islets portal](https://
 
 ### Download procedure:
 
-1. Go to [https://hpap.pmacs.upenn.edu/](https://hpap.pmacs.upenn.edu/)
+1. Go to [Human Islets portal](https://www.humanislets.com/#/)
 2. Navigate to the **Data Download** section.
 3. Apply the following filters:
    - Sex: **male** and **female**
