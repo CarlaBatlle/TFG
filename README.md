@@ -41,7 +41,8 @@ Data used in this project was downloaded from the [Human Islets portal](https://
 - `unproc_pbrna_Beta.csv`: raw counts matrix (beta cells pseudobulk)
 - `unproc_pbrna_Alpha.csv`: raw counts matrix (alpha cells pseudobulk)
 
-Ensure all files are placed in your R working directory (e.g., `~/Documents/practiques/data`). Metadata must include `record_id`, `donorage`, `diagnosis_computed`, and `donorsex` columns. You also have the data abailable in the repository.
+Ensure all files are placed in your R working directory (e.g., `~/Documents/practiques/data`). 
+You also have the data abailable in the repository.
 
 ---
 
