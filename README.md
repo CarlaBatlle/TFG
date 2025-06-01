@@ -11,7 +11,7 @@ The project integrates public transcriptomic datasets with open-source statistic
 
 The workflow includes the next steps:
 
-<img width="282" alt="image" src="https://github.com/user-attachments/assets/9be78f5c-329e-450a-b18e-18cdd9a0ac91" />
+<img width="275" alt="image" src="https://github.com/user-attachments/assets/f8eb346f-b741-4dd5-a8cc-0f75d9a52207" />
 
 ---
 
