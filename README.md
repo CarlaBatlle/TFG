@@ -23,8 +23,7 @@ Data used in this project was downloaded from the [Human Islets portal](https://
 
 1. Go to [Human Islets portal](https://www.humanislets.com/#/)
 2. Navigate to the **Data Download** section.
-3. Apply the following filters:
-   - Sex: **male** and **female**
+3. Apply the following filter:
    - Diagnosis: **SA (non-diabetic)** and **Type 2 Diabetes**
 4. Select the following datasets:
    - **Bulk RNA-seq**
